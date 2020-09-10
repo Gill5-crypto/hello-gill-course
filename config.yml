@@ -1,0 +1,16 @@
+title: Hello-Gill
+description: Something for a starter
+template:
+  repo: hello-gill-template
+  name: hello-gill
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
